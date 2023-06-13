@@ -1,5 +1,22 @@
+html,
+body,
+#root,
 .App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  background-color: #172A3A;
+  color: #F5F5F5;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
 }
 
 .App-logo {
@@ -35,4 +52,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-page {
+  background-color: #61dafb;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh; /* Make the navbar take the full height of the viewport */
+  background-color: #0B131E; /* Adjust the background color as needed */
+  padding: 20px; /* Add padding to the navbar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 20%;
+}
+
+.current {
+  background-color: #202B3B;
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  justify-items: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+.horizontal-line {
+  border: none;
+  height: 1.5px;
+  background-color: #ccc;
+  background-image: linear-gradient(to right, #ccc, #fff, #ccc);
+  width: 100%;
+  opacity: 30%;
+}
+
+.datetime {
+  color: #B1B6BF;
+}
+
+.currentImage {
+  transform: scale(1.2); /* Increase the size by 1.5 times */
+  align-self: left;
+}
+
+.currentTemperature {
+  font-size: 40px;
+}
+
+.location, .currentTime {
+  color: #cbcdd1;
+}
+
+.condition {
+  font-weight: lighter;
+}
+
+.predictedWeather {
+  background-color: #202B3B;
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  justify-items: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.forecastDay {
+  display: grid;
+  justify-items: left;
 }
