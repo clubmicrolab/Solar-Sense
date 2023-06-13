@@ -6,7 +6,7 @@ body,
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #172A3A;
+  background-color: #100c2a;
   color: #F5F5F5;
 }
 
@@ -17,6 +17,7 @@ body,
 
 .content {
   flex: 1;
+  padding-left: 20%; /* Add padding to create space between the navbar and the content */
 }
 
 .App-logo {
@@ -63,14 +64,14 @@ body,
   left: 0;
   top: 0;
   height: 100vh; /* Make the navbar take the full height of the viewport */
-  background-color: #0B131E; /* Adjust the background color as needed */
+  background-color: #080616; /* Adjust the background color as needed */
   padding: 20px; /* Add padding to the navbar */
   overflow-y: auto; /* Enable vertical scrolling */
   width: 23%;
 }
 
 .current {
-  background-color: #202B3B;
+  background-image: linear-gradient(to bottom right, #17113e, #100c2a );
   border-radius: 15px;
   padding: 20px;
   display: grid;
@@ -111,7 +112,7 @@ body,
 }
 
 .predictedWeather {
-  background-color: #202B3B;
+  background-image: linear-gradient(to bottom right, #17113e, #100c2a );
   border-radius: 15px;
   padding: 20px;
   display: grid;
@@ -158,4 +159,15 @@ body,
 
 .predCondition {
   font-weight: lighter;
+}
+
+.main {
+  display: grid;
+  padding-top: 6%;
+  padding-left: 15%;
+}
+
+.chart {
+  width: 80%;
+  justify-self: center;
 }
