@@ -12,9 +12,6 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<MainPage/>}/>
-          <Route path="/quizzes-list" element={<MainPage/>}/>
-          <Route path="/register" element={<MainPage/>}/>
-          <Route path="/quiz" element={<MainPage/>}/>
         </Routes>
         </div>
     </div>

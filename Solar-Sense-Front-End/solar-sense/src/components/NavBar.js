@@ -16,10 +16,11 @@ export default function NavBar() {
         const fetchData = async () => {
           try {
             const response = await fetch(
-                `https://api.weatherapi.com/v1/forecast.json?key=${weatherAPIKey}&q=${latitude},${longitude}&days=7&hourly=24`,
+                `https://api.weatherapi.com/v1/forecast.json?key=${weatherAPIKey}&q=${latitude},${longitude}&days=3&hourly=24`,
             );
             const data = await response.json();
             setWeatherData(data);
+            console.log(weatherData)
             setLoading(false);
           } catch (error) {
             console.error('Error fetching weather data:', error);
@@ -53,11 +54,20 @@ export default function NavBar() {
                 )}
                 </div>
                   <div className="predictedWeather">
+                    <p className="containerTitle">3-DAY FORECAST</p>
                     {weatherData.forecast.forecastday.map(day => {
+                        const [year, month, date] = day.date.split('-');
+                        const formattedDate = `${date}.${month}`;            
                         return (
                         <div className="forecastDay" id={day.date}>
-                            {day.date}
-                            <div>Predicted Energy Production: 218 kW</div>
+                            <div className="dateAndIcon">
+                                <div className="forecastDate">{formattedDate}</div>
+                                <img className="predIcon" src={day.day.condition.icon} alt="Weather Icon" />
+                            </div>
+                            <div className="predCondition">{day.day.condition.text}</div>
+                            <div className="predTemperature">Temperature: {day.day.avgtemp_c}°C</div>
+                            <div className="predHumidity">Humidity: {day.day.avghumidity}%</div>
+                            <div className="predEnergy">Energy Production: 218 kW</div>
                             <hr className="horizontal-line" />
                         </div>
                     )})}
