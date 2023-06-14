@@ -1,0 +1,173 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #100c2a;
+  color: #F5F5F5;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding-left: 20%; /* Add padding to create space between the navbar and the content */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-page {
+  background-color: #61dafb;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh; /* Make the navbar take the full height of the viewport */
+  background-color: #080616; /* Adjust the background color as needed */
+  padding: 20px; /* Add padding to the navbar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 23%;
+}
+
+.current {
+  background-image: linear-gradient(to bottom right, #17113e, #100c2a );
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  justify-items: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+.horizontal-line {
+  border: none;
+  height: 1.5px;
+  background-color: #ccc;
+  background-image: linear-gradient(to right, #ccc, #fff, #ccc);
+  width: 100%;
+  opacity: 30%;
+}
+
+.datetime {
+  color: #B1B6BF;
+}
+
+.currentImage {
+  transform: scale(1.2); /* Increase the size by 1.5 times */
+  align-self: left;
+}
+
+.currentTemperature {
+  font-size: 40px;
+}
+
+.location, .currentTime {
+  color: #cbcdd1;
+}
+
+.condition {
+  font-weight: lighter;
+}
+
+.predictedWeather {
+  background-image: linear-gradient(to bottom right, #17113e, #100c2a );
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  justify-items: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 50px;
+}
+
+.forecastDay {
+  display: grid;
+  justify-items: left;
+  width: 100%;
+}
+
+.containerTitle {
+  font-weight: 900;
+  font-size: smaller;
+  color: #B1B6BF;
+}
+
+.forecastDay {
+  color: #cbcdd1;
+}
+
+.forecastDate {
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+.dateAndIcon {
+  display: flex;
+  align-items: center;
+}
+
+.forecastDate {
+  margin-right: 160px; /* Adjust the spacing between date and icon as needed */
+}
+
+.predIcon {
+  margin-right: 10px;
+  transform: scale(1); /* Increase the size by 1.5 times */
+}
+
+.predCondition {
+  font-weight: lighter;
+}
+
+.main {
+  display: grid;
+  padding-top: 6%;
+  padding-left: 15%;
+}
+
+.chart {
+  width: 80%;
+  justify-self: center;
+}
